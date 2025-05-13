@@ -1,0 +1,113 @@
+body {
+    background-color: #f1d5da; /* 背景颜色 */
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* 页面内容部分 */
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 图片大小和过渡效果 */
+#mainImage {
+    width: 200px;
+    transition: all 0.3s ease;
+}
+
+/* 标题字体和颜色 */
+h1 {
+    font-size: 28px;
+    color: #68495b;
+}
+
+/* 按钮样式 */
+button {
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.3s ease;
+}
+
+#yes {
+    background-color: #d4818e; /* 代表“是”的颜色 */
+    color: white;
+}
+
+#no {
+    background-color: #6784b1; /* 代表“否”的颜色 */
+    color: white;
+    position: relative;
+}
+
+/* Yes 界面固定全屏 */
+.yes-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffdae0; /* 背景颜色 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 添加音符旋转动画 */
+@keyframes musicRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* 音乐控制按钮样式 */
+#musicControl {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 999999;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+    transition: all 0.3s ease;
+    animation: musicRotate 3s linear infinite; /* 旋转动画 */
+}
+
+/* 页脚样式 */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+footer p {
+    margin: 0;
+    color: #ff6699;
+    font-size: 14px;
+    font-family: 'Microsoft YaHei', sans-serif;
+}
+
+/* 保护容器内容，底部空间留出 */
+.container {
+    padding-bottom: 60px; /* 底部空隙 */
+}
